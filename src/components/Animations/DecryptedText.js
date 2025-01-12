@@ -204,21 +204,19 @@ export default function DecryptedText({
       {...hoverProps}
       {...props}
     >
-      <span className="sr-only">{displayText}</span>
 
       <span aria-hidden="true">
         {displayText.split('').map((char, index) => {
-          const isRevealedOrDone =
-            revealedIndices.has(index) || !isScrambling || !isHovering
+          const isRevealedOrDone = revealedIndices.has(index) || !isScrambling || !isHovering
 
-        //   return (
-        //     <span
-        //       key={index}
-        //       className={isRevealedOrDone ? className : encryptedClassName}
-        //     >
-        //       {char}
-        //     </span>
-        //   )
+          return (
+            <span
+              key={index}
+              className={isRevealedOrDone ? className : encryptedClassName}
+            >
+              {char}
+            </span>
+          )
         })}
       </span>
     </motion.span>
