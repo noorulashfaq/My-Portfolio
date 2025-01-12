@@ -5,7 +5,7 @@ import AboutBox from "./AboutBox";
 
 const About = () => {
   const downloadResume = async () => {
-    window.open("https://drive.google.com/file/d/1yAUgozujYysnzqOZvKQ-WXHQoojG-0Mc", "_blank");
+    window.open("https://drive.google.com/file/d/1xAQqrgUa3U_yWrFDI4jZUI8svsVaU-Nl/view?usp=sharing", "_blank");
   };
 
   return (

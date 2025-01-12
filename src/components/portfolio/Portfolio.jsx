@@ -42,11 +42,11 @@ const Portfolio = () => {
               : "portfolio__item"
           }
           onClick={() => {
-            filterItems("Frontend");
+            filterItems("Academic");
             setActiveFilter(1);
           }}
         >
-          Frontend
+          Academic
         </span>
         <span
           className={
@@ -55,11 +55,11 @@ const Portfolio = () => {
               : "portfolio__item"
           }
           onClick={() => {
-            filterItems("Backend");
+            filterItems("Freelance");
             setActiveFilter(2);
           }}
         >
-          Backend
+          Freelance
         </span>
         {/* <span
           className={

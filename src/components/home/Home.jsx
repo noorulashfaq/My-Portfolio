@@ -1,28 +1,46 @@
-import React from 'react';
-import './Home.css';
-import Me from '../../assets/avatar-1.svg';
-import HeaderSocials from './HeaderSocials';
-import ScrollDown from './ScrollDown';
-import Shapes from './Shapes';
+import React from "react";
+import "./Home.css";
+import DecryptedText from "../Animations/DecryptedText";
+import BlurText from "../Animations/BlurText";
+import Me from "../../assets/avatar-1.svg";
+import HeaderSocials from "./HeaderSocials";
+import ScrollDown from "./ScrollDown";
+import Shapes from "./Shapes";
 
 const Home = () => {
-    return (
-        <section className="home container" id='home'>
-            <div className="intro">
-                <img src={Me} alt="" className='home__img' width='120' />
-                <h1 className="home__name">Noorul Ashfaq A</h1>
-                <span className="home__education">I'm a Software Engineer</span>
+  return (
+    <section className="home container" id="home">
+      <div className="intro">
+        <img src={Me} alt="" className="home__img" width="120" />
+        
+        <BlurText
+          text="Noorul Ashfaq A"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          className="home__name text-2xl mb-8"
+        />
+        <div>
+          <DecryptedText
+            className="home__education"
+            text="Software Engineer & Designer"
+            animateOn="view"
+            revealDirection="center"
+          />
+        </div>
+        <HeaderSocials />
 
-                <HeaderSocials />
+        <a href="#contact" className="btn">
+          {" "}
+          Contact Me
+        </a>
 
-                <a href="#contact" className="btn"> Contact Me</a>
+        <ScrollDown />
+      </div>
 
-                <ScrollDown />
-            </div>
+      <Shapes />
+    </section>
+  );
+};
 
-            <Shapes />
-        </section>
-    )
-}
-
-export default Home
+export default Home;
